@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Function Return Value</title>
+</head>
+<body>
+      <script>
+            function sayHello(firstName, lastName) {
+                  const say = `Hello ${firstName} ${lastName}`;
+                  // return value
+                  return say;
+            }
+            //pemanggilan harus ditampung di variabel jika ingin mendapatkan value dari return
+            const result = sayHello('Rasidi', 'Ahmad');
+            // document.writeln(result);
+
+            // function return value lebih dari satu 
+            function getFinalScore(value) {
+                  if ( value > 90 ) {
+                        return 'A';
+                  } else if ( value > 80 ) {
+                        return 'B';
+                  } else if ( value > 70 ) {
+                        return 'C';
+                  } else if ( value > 60 ) {
+                        return 'D';
+                  } else {
+                        return 'E';
+                  }
+            }
+
+            const score = getFinalScore(70);
+            document.writeln(`Skor nilai anda adalah ${score}`);
+
+            // return juga berfungsi atau digunakan untuk keluar dari function
+            const array =[32,434,432,324,234,5,32];
+            const search = 111;
+            function isExist(array, searchValue) {
+                  for (const element of array) {
+                        console.log(`Iterasi element ke ${element}`);
+                        if (element === searchValue) {
+                              return true;
+                        }
+                  }
+                  return false;
+            }
+
+            const found = isExist(array, search);
+            document.writeln(`<p>${found}</p>`)
+      </script>
+</body>
+</html>

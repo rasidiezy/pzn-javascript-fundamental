@@ -1,0 +1,24 @@
+<!-- Function rest parameter adalah sebuah cara yang digunakan untuk mengirimkan data tanpa batasan dan ditampung dalam satu parameter dalam bentuk array.
+rest parameter harus berada di akhir dari sebuah parameter. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Function Rest Parameter</title>
+</head>
+<body>
+      <script>
+            function sum(name, ...data) {
+                  let total = 0;
+                  for (const number of data) {
+                        total += number;
+                  }
+                  console.log(total);
+            }
+
+            sum('Blue', 3, 5, 76, 32, 76, 97, 07, 07, 64, 54, 98, 654)
+      </script>
+</body>
+</html>

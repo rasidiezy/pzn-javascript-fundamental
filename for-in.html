@@ -1,0 +1,27 @@
+<!-- sebuah fungsi yang digunakan untuk mengecek PROPERTY / INDEX didalam object atau array -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <script>
+            const person = {
+                  name : 'Rasidi',
+                  umur : 33,
+                  nation : 'Indonesia'
+            }
+            for (const property in person) {
+               console.log(`${property}`);
+            }
+
+            const names = ['Rasidi', 'Ahmad', 'Jali'];
+            for (const index in names) {
+                 console.log(`${index} :  ${names[index]}`);
+            }
+      </script>
+</body>
+</html>

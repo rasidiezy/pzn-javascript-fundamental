@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <script>    
+            // console.log("Hello" || "");
+            // console.log( 0 || "0");
+            // console.log( null || "NULL");
+            // console.log( undefined || "UNDEFINED");
+
+            const name = {
+                  firstName : "Akbar",
+                  lastName : ""
+            };
+
+            // if (name.firstName == false) {
+            //       console.log(name.lastName);
+            // } else if (name.lastName == false) {
+            //       console.log(name.firstName);
+            // }
+            
+            // operator || akan dibaca dari kiri ke kanan 
+            // akan mencetak data yang truthy/true
+            // console.log(name.firstName || name.lastName || "Data Kosong");
+
+            console.log("Hello" && "");
+            console.log("" && []);
+            console.log("0" && "NOL"); //jika data true semua, maka akan diambil data paling kanan
+            console.log( 0 && "0");
+            console.log( null && "NULL");
+            console.log( undefined && "UNDEFINED");
+
+            // operator && akan mencetak data yang falsy/false
+            console.log(name.firstName && name.lastName);
+
+        
+      </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- Optional chaining adalah sebuah operator yang digunakan untuk mengamankan ketika kita ingin
+mengakses properti sebuah object dari data nullish (undefined/null) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <script>
+
+            const person = {
+                  adress: {
+                        region : 'Central Kalimantan'
+                  }
+            }
+            //OPTIONAL CHAINING DITANDAI DENGAN PEMBERIAN '?' SETELAH PEMANGGILAN PROPERTI OBJECT
+            const country = person.adress?.region;
+
+            document.writeln('SUKSES');
+            document.writeln(`<p>${country}</p>`);
+            document.writeln('SUKSES');
+
+
+      </script>
+</body>
+</html>

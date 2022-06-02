@@ -1,0 +1,41 @@
+<!-- 
+      in operator = untuk mengecek apakah sebuah properti/index ada atau tidak, TAPI TIDAK MENGECEK VALUE.
+      juga bisa dibuat untuk perkondisian karena hasil akan bernilai true/false. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>In Operator</title>
+</head>
+<body>
+      <script>
+
+            const person = {
+                  nama: 'Rasidi',
+                  umur: 23
+            }
+            const result = 'umur' in person;
+            document.writeln(`<p> ${result} </p>`)
+
+            const student = {
+                  firstName: 'Rasidi',
+                  middleName: undefined,
+                  lastName: 'Putra',
+            }
+
+            const mhs = [1,2,3];
+            const result1 = 0 in mhs;
+            console.log(true);
+
+            if ('middleName' in student) {
+                  alert(`Hello ${student.middleName}`)
+            } else {
+                  alert('Tidak ada')
+            }
+</script>
+</body>
+</html>

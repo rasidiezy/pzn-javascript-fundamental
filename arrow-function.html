@@ -1,0 +1,60 @@
+<!-- Arrow function adl alternatif pembuatan function yang lebih sederhana,
+tp terdpat limitasi tdk bisa digunakan di semua situasi.
+kekurangan arrow function :
+- tidak memiliki fitur arguments
+- tidak bisa menggunakan function generator
+- tidak bisa mengakses this
+- tidak bisa mengakses super -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Arrow Function</title>
+</head>
+<body>
+      <script>
+            //declaration function
+            function mahasiswa() {
+                  console.log(`ini adalah Declaration Function`);
+            }
+            mahasiswa();
+
+            //Anonymous Function
+            const anon = function () {
+                  console.log('Ini adalah Anonymous Function');
+            }
+            anon();
+
+            // Arrow Function
+            // ditampung di variabel dan menggunakan tanda '=>'
+            const mahasiswa1 = () => {
+                  console.log(`Ini adalah Arrow Function`);
+            } 
+            mahasiswa1();
+            
+            // Juga bisa disederhanakan menjadi tanpa blok  
+            const mahasiswa2 = () => console.log(`Ini adalah Arrow Function tanpa blok`);
+            mahasiswa2();
+
+            // jika arrow function tanpa blok, dan hanya kode sebaris return bisa dihilangkan
+            const sum = (valueOne, valueTwo) => valueOne + valueTwo;
+            console.log(sum(100,100));
+
+            // jika arrow function hanya satu parameter maka bisa ditulis tanpa '()'
+            const person = name => console.log(`Nama saya adalah ${name}`);      
+            person('Rasidi');
+
+            // arrow function sebagai parameter
+            function GiveMeName(callback) {
+                  callback('Rasidi');
+            }
+            
+            GiveMeName((name) => console.log(`Hello ${name}`));
+                  
+            
+
+      </script>
+</body>
+</html>

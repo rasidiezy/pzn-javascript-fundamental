@@ -1,0 +1,75 @@
+<!-- Fitur yang bisa digunakan untuk membongkar value value di array atau object ke dalam variabel -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Destructuring</title>
+</head>
+<body>
+      <script>
+            const names = ['Rasidi', 'Ahmad', 'Pratama', 'Joko', 'Muhammad'];
+            // Destructuring Array
+            const [firstName, middleName, lastName, ...other] = names;
+            // console.log(firstName);
+            // console.log(middleName);
+            // console.log(lastName);
+            // console.log(other);
+
+            const mahasiswa = {
+                  nama : 'Rasidi',
+                  umur : 24,
+                  gender : "Laki-laki",
+                  alamat : {
+                        jalan : "Jl. Buntok Ampah",
+                        kec : "Dusun Selatan",
+                        prov : "Kalimantan Tengah",
+                  },
+                  hobi : "game",
+                  edu : "Universitas Islam Kalimantan Muhammad Arsyad Al Banjari"
+            }
+            // Destructuring Object
+            const {nama, umur, gender, alamat:{jalan, kec, prov}, ...others} = mahasiswa;
+
+            // console.log(nama);
+            // console.log(umur);
+            // console.log(jalan);
+            // console.log(kec);
+            // console.log(prov);
+            // console.log(others);
+
+            // Destruction object di Parameter Function 
+            const person = {
+                  namaTengah :  "Eril",
+                  namaPertama : "Mumtaz",
+                  namaTerakhir : "Putra"
+            }
+
+            function displayPerson({namaPertama, namaTengah, namaTerakhir}) {
+                  console.log(namaPertama);
+                  console.log(namaTengah);
+                  console.log(namaTerakhir);
+            }     
+            displayPerson(person);
+
+            // Destruction array di parameter function
+            const number = [3,2];
+            
+            function sum([firstNumber, secondNumber]) {
+                 return firstNumber + secondNumber
+            }
+
+            console.log(sum(number));
+
+            // Default value di destruction
+            const namaManusia = ["Eko"];
+            const [firstName1 = 'Rasidi', middleName1 = "Idisar", lastName1 = "Mumtaz"] = namaManusia;
+
+            console.log(firstName1);
+            console.log(middleName1);
+            console.log(lastName1);
+            
+      </script>
+</body>
+</html>

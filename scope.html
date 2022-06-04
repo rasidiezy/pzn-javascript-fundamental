@@ -1,0 +1,67 @@
+<!--  Scope adalah kondisi dimana sebuah kode/variabel bisa diakses atau dapat dijangkau.
+di javascript ada 2 scope : global scope dan local scope.
+segala kode/variabel yang ada di global scope dapat diakses dari local scope,
+tapi kode/variabel di local scope tidak bisa diakses dari global scope. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Scope</title>
+</head>
+<body>
+      <script>
+            // Global Scope
+            let counter = 0;
+
+            // global scope
+            function hitMe () {
+                  // local scope hitMe
+                  counter++;
+            }     
+
+            // global scope
+            function other() {
+                  // local scope other
+
+            hitMe();
+            hitMe();
+            hitMe();
+            hitMe();
+            hitMe();
+            }
+
+            other();
+            other();
+            
+
+            // console.log(counter);
+
+            // nested function scope
+            function outer() {
+                  //local scope outer
+                  let firstName = "Rasidi";
+                  function inner() {
+                        // local scope inner
+                        // function inner dapat mengakses localscope function pembungkusnya.
+                        // tapi tidak bisa mengakses local scope diluar function pembungkusnya,
+                        // atau mengakses function lain yang ada di function pembungkusnya.
+                        console.log(`Halo, nama saya adalah ${firstName}`);
+                        // contoh mencoba mengakses data yang ada di function lain akan error
+                        // console.log(`Halo, umur saya adalah ${agePerson}`); // ERROR
+                  }
+                  
+                  function second() {
+                        // local scope second
+                        const agePerson = 23;
+                  }
+
+                  inner();
+            }
+
+            outer();
+
+      </script>
+</body>
+</html>

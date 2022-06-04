@@ -1,0 +1,38 @@
+<!-- This adalah referensi ke object milik siapa, tiap lokasi this bisa berbeda beda referensi pemiliknya
+- di Object Method, this merupakan referensi ke object pemilik functionnya
+- di Global Scope, this merupakan referensi ke global object (window)
+- di function, this merupakan referensi ke global object (window)
+- di function strict mode, this adalah undefined
+- di event, this merupakan referensi ke element yang menerima event -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>This</title>
+</head>
+<body>
+      <script>
+            const person = {
+                  name : "Rasidi",
+                  sayHello : function(name) { 
+                        console.log(`Halo, Nama saya adalah ${name} , dan saya adalah ${this.name}`) // object pembungkusnya method
+                  }
+            }
+
+      console.log(this); // window
+            function outer() {
+                  console.log(this); // window
+
+                  function inner() {
+                        console.log(this); // window
+                  }
+                  inner();
+            }
+            
+            outer(); 
+            person.sayHello('Ahmad');
+      </script>
+</body>
+</html>

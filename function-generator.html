@@ -1,0 +1,41 @@
+<!--  Function yang digunakan untuk membuat data generator,
+generator adalah data yang dapat diiterasi seperti array -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Function Generator</title>
+</head>
+<body>
+      <script>
+
+            function* createNames() {
+                  yield "Rasidi";
+                  yield "Ahmad";
+                  yield "Saputra";
+            }
+
+            const names = createNames();
+            for (const name of names) {
+                  console.log(name);
+            }
+
+            function* getNumber(value) {
+                  for (let i = 1; i < value; i++) {
+                        if (i % 2 == 1) {
+                               yield i;
+                        }
+                  }
+            }
+
+            const numbers = getNumber(50);
+            for (const number of numbers) {
+                  console.log(number);
+            }
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- Recursive function adalah dimana sebuah function memanggil function itu sendiri -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Recursive Function</title>
+</head>
+<body>
+      <script>
+            // membuat faktorial dengan perulangan for
+            // function factorial(value) {
+            //       let total = 1;
+            //       for (let i = 1; i <= value; i++) {
+            //             total *= i;
+            //       }
+            //       return total;
+            // }
+            // console.log(factorial(5));
+
+            // membuat faktorial dengan recursive
+            // function factorialRecursive(value) {
+                  //membuat kondisi untuk menghentikan pemanggilan function
+                  // if ( value === 1 ) {
+                  //       return 1;
+                  // } else {
+                        // memanggil functionnya sendiri untuk melakukan perulangan dan perkalian
+                        // return value * factorialRecursive(value - 1);
+            //       }
+            // }
+            // console.log(factorial(5));
+            
+            // function iteration(value) {
+            //       for (let i = 1; i <= value; i++) {
+            //             console.log(`Perulangan ke ${i}`);
+            //       }
+            // }
+            // iteration(5);
+
+            function iterationRecursive(value) {
+                  if ( value === 1) {
+                        return `Perulangan ke 1`;
+                  } else {
+                        return `Perulangan ke ${value} 
+${iterationRecursive( value - 1 )}`;
+                  }
+            }
+            
+            const result = iterationRecursive(5);
+            console.log(result);
+      </script>
+</body>
+</html>

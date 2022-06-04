@@ -1,0 +1,31 @@
+<!-- Object Method adalah sebuah function yang berada didalam object. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Object Method</title>
+</head>
+<body>
+      <script>
+            const mahasiswa = {
+                  nama : "Rasidi",
+                  sayHello :  (nama) => console.log(`Hello ${nama}`)
+            }
+
+            console.log(mahasiswa.nama);
+            mahasiswa.sayHello("Ahmad");
+
+            const person = {
+                  name : 'Muhammad'
+            }
+            // menambah method ke object yang sudah dibuat
+            person.sayHello = function (name) {
+                  alert(`Hello ${name}`)
+            }
+            console.log(person.sayHello('Aziz'));
+            
+      </script>
+</body>
+</html>
